@@ -4,7 +4,9 @@
 
 ## Changelog
 
-### Planned features
 
-See the [GitHub "Features" project](https://github.com/users/peter88213/projects/4/views/1).
+### v1.0.0
 
+- Release under the GPLv3 license.
+
+Based on novxlib v1.0.0

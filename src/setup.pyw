@@ -9,7 +9,7 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 import os
 import sys
 import stat
-from shutil import copyfile
+from shutil import copy2
 from shutil import copytree
 from shutil import rmtree
 from pathlib import Path
@@ -100,7 +100,7 @@ def install(novxlibPath):
                 output(f'Removing "{file.name}"')
 
     # Install the new version.
-    copyfile(APP, f'{installDir}/{APP}')
+    copy2(APP, f'{installDir}/{APP}')
     output(f'Copying "{APP}"')
 
     # Install the icon files.
@@ -116,7 +116,7 @@ def install(novxlibPath):
         with os.scandir(SAMPLE_PATH) as files:
             for file in files:
                 if not os.path.isfile(f'{cnfDir}{file.name}'):
-                    copyfile(f'{SAMPLE_PATH}{file.name}', f'{cnfDir}{file.name}')
+                    copy2(f'{SAMPLE_PATH}{file.name}', f'{cnfDir}{file.name}')
                     output(f'Copying "{file.name}"')
                 else:
                     output(f'Keeping "{file.name}"')

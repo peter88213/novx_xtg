@@ -1,4 +1,4 @@
-[Project homepage](https://peter88213.github.io/novx_xtg) > Instructions for use
+[Project homepage](https://github.com/peter88213/novx_xtg) > Instructions for use
 
 ---
 

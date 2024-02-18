@@ -3,7 +3,7 @@
 [![News](docs/img/news-button.png)](https://github.com/peter88213/noveltree/discussions/1)
 
 
-# ![X] (src/icons/xLogo32.png)novx_xtg
+# ![X](src/icons/xLogo32.png) novx_xtg
 
 The novx_xtg Python script exports [noveltree](https://github.com/peter88213/noveltree/) projects as a whole in the *XPress Tags* format for the Quark XPress DTP software. It generates an XTG file ready for import into a QX book project. This is done based on template files for chapters and sections, so you can be quite flexible with the program output. In addition, the exporter script can take some routine work off your hands, for example, formatting figures and acronyms in a special way, if desired. Formatting codes and paragraph/character style tags are read from a configuration file.
 Optionally, one XTG file per chapter can be generated.

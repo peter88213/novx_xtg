@@ -60,7 +60,7 @@ and all template files as listed below to be applied to this project. The best w
 
 This is an exapmle configuration file containing the default values mentioned above:
 
-```
+```ini
 [STYLES]
 first_paragraph = @Text body:
 

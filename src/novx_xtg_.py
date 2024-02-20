@@ -7,6 +7,7 @@ For further information see https://github.com/peter88213/novx_xtg
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
+import sys
 from pathlib import Path
 from novxlib.ui.ui_tk import UiTk
 from novxlib.ui.ui import Ui
@@ -85,7 +86,7 @@ if __name__ == '__main__':
         sys.exit(1)
     try:
         homeDir = str(Path.home()).replace('\\', '/')
-        installDir = f'{homeDir}/.noveltree/{APPNAME}/config'
+        installDir = f'{homeDir}/.novx/{APPNAME}/config'
     except:
         installDir = '.'
     main(sourcePath, silentMode, installDir)

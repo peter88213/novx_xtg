@@ -20,6 +20,9 @@ except ModuleNotFoundError:
     print('The tkinter module is missing. Please install the tk support package for your python3 version.')
     sys.exit(1)
 
+from tkinter import messagebox
+import relocate
+
 APPNAME = 'novx_xtg'
 VERSION = ' @release'
 APP = f'{APPNAME}.py'
@@ -72,6 +75,14 @@ def open_folder(installDir):
 
 def install(novxlibPath):
     """Install the script."""
+    #--- Relocate the v1.x installation directory.
+    try:
+        messagebox.showinfo(
+        'Moving the noveltree installation directory',
+        relocate.main()
+        )
+    except:
+        pass
 
     # Create a general noveltree installation directory, if necessary.
     os.makedirs(novxlibPath, exist_ok=True)
@@ -148,14 +159,14 @@ if __name__ == '__main__':
 
     # Run the installation.
     homePath = str(Path.home()).replace('\\', '/')
-    novxlibPath = f'{homePath}/.noveltree/'
+    novxlibPath = f'{homePath}/.novx/'
     try:
         install(novxlibPath)
     except Exception as ex:
         output(str(ex))
 
     # Show options: open installation folders or quit.
-    root.openButton = Button(text="Open installation folder", command=lambda: open_folder(f'{homePath}/.noveltree/{APPNAME}'))
+    root.openButton = Button(text="Open installation folder", command=lambda: open_folder(f'{homePath}/.novx/{APPNAME}'))
     root.openButton.config(height=1, width=30)
     root.openButton.pack(padx=5, pady=5)
     root.quitButton = Button(text="Quit", command=quit)

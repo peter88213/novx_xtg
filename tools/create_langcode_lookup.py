@@ -33,7 +33,7 @@ def main(installDir='.'):
 if __name__ == '__main__':
     try:
         homeDir = str(Path.home()).replace('\\', '/')
-        installDir = f'{homeDir}/.noveltree/{APPNAME}/config'
+        installDir = f'{homeDir}/.novx/{APPNAME}/config'
     except:
         installDir = '.'
 main(installDir)

@@ -78,13 +78,13 @@ def install(novxlibPath):
     #--- Relocate the v1.x installation directory.
     try:
         messagebox.showinfo(
-        'Moving the noveltree installation directory',
+        'Moving the novelibre installation directory',
         relocate.main()
         )
     except:
         pass
 
-    # Create a general noveltree installation directory, if necessary.
+    # Create a general novelibre installation directory, if necessary.
     os.makedirs(novxlibPath, exist_ok=True)
     installDir = f'{novxlibPath}{APPNAME}'
     cnfDir = f'{installDir}{INI_PATH}'
@@ -95,7 +95,7 @@ def install(novxlibPath):
     try:
         # Move an existing installation to the new place, if necessary.
         oldHome = os.getenv('APPDATA').replace('\\', '/')
-        oldInstDir = f'{oldHome}/pnoveltree/{APPNAME}'
+        oldInstDir = f'{oldHome}/pnovelibre/{APPNAME}'
         os.replace(oldInstDir, installDir)
         output(f'Moving "{oldInstDir}" to "{installDir}"')
     except:

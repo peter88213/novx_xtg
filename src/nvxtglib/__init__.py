@@ -1,9 +1,9 @@
-"""Package for XPress tagged text export from noveltree projects.
+"""Package for XPress tagged text export from novelibre projects.
 
 Modules:
 
 xtg_file -- Provide a class for XPress tagged file processing. 
-xtg_exporter -- Provide an XTG exporter class for noveltree.
+xtg_exporter -- Provide an XTG exporter class for novelibre.
 xtg_config -- Provide a configuration class for reading and writing INI files.
 
 Copyright (c) 2022 Peter Triesberger

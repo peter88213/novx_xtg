@@ -1,4 +1,4 @@
-"""Export noveltree project to XPress tagged text.
+"""Export novelibre project to XPress tagged text.
 
 Version @release
 Requires Python 3.6+
@@ -52,7 +52,7 @@ def main(sourcePath, silentMode=True, installDir='.'):
     if silentMode:
         ui = Ui('')
     else:
-        ui = UiTk('Export XTG from noveltree @release')
+        ui = UiTk('Export XTG from novelibre @release')
         set_icon(ui.root, icon='xLogo32')
 
     #--- Try to get persistent configuration data

@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.0.0.zip)
+[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.1.0.zip)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
 [![Online help](docs/img/help-button.png)](docs/usage.md)
@@ -16,9 +16,9 @@ Optionally, one XTG file per chapter can be generated.
 
 ## Download and install
 
-[Download the latest release (version 2.0.0)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.0.0.zip)
+[Download the latest release (version 2.1.0)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.1.0.zip)
 
-- Extract the "novx_xtg_v2.0.0" folder from the downloaded zipfile "novx_xtg_v2.0.0.zip".
+- Extract the "novx_xtg_v2.1.0" folder from the downloaded zipfile "novx_xtg_v2.1.0.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for further instructions.
@@ -33,7 +33,7 @@ See the [instructions for use](docs/usage.md)
 
 ## Credits
 
-- The icons are made using the free *Pusab* font by Ryoichi Tsunekawa, [Flat-it](http://flat-it.com/).
+- The logo is made using the free *Pusab* font by Ryoichi Tsunekawa, [Flat-it](http://flat-it.com/).
 - User *Hunter_71* presented the number to English conversion algorithm on [stack overflow](https://stackoverflow.com/a/51849443).
 - User *Aristide* presented the integer to roman numeral conversion on [stack overflow](https://stackoverflow.com/a/47713392).
 

@@ -110,16 +110,16 @@ figure0 =
 
 adjust_digits = Yes
 
-# If True, adjust digit-separating blanks.
+# If Yes, adjust digit-separating blanks.
 
 space_points = Yes
 
-# If True, space digit-separating points.
+# If Yes, space digit-separating points.
 
 per_chapter = No
 
-# If True, create one XTG file for each chapter.
-# If False, create one XTG file for the entire document.
+# If Yes, create one XTG file for each chapter.
+# If No, create one XTG file for the entire document.
 
 ```
 
@@ -258,4 +258,4 @@ There are two options:
 
 The setup script installs *novx_xtg.pyw* in the user profile. This is the installation path on Windows: 
 
-`c:\Users\<user name>.novelibre\novx_xtg`
+`c:\Users\<user name>.novx\novx_xtg`

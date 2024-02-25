@@ -269,7 +269,7 @@ class XtgFile(FileExport):
         for chId in self.novel.tree.get_children(CH_ROOT):
             lines = []
             dispNumber = 0
-            if not self._chapterFilter.accept(self, chId):
+            if not self.chapterFilter.accept(self, chId):
                 continue
             # The order counts; be aware that "Todo" and "Notes" chapters are
             # always unused.

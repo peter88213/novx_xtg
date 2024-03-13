@@ -5,7 +5,13 @@
 ## Changelog
 
 
-### v2.2.0
+### v2.2.1
+
+Provide localized weekday and month names for all languages.
+
+Based on novxlib v3.0.1
+
+#### v2.2.0
 
 Update for novxlib v3.0, adding date-related placeholders for the section export.
 

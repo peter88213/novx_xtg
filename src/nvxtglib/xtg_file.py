@@ -10,7 +10,7 @@ from string import Template
 
 from novxlib.file.file_export import FileExport
 from novxlib.novx_globals import *
-from novxlib.yw.novx_to_yw7 import NovxToYw7
+from novxlib.shortcode.novx_to_shortcode import NovxToShortcode
 
 
 class XtgFile(FileExport):
@@ -265,7 +265,6 @@ class XtgFile(FileExport):
         chapterNumber = 0
         sectionNumber = 0
         wordsTotal = 0
-        lettersTotal = 0
         for chId in self.novel.tree.get_children(CH_ROOT):
             lines = []
             dispNumber = 0
@@ -290,7 +289,7 @@ class XtgFile(FileExport):
                 lines.append(template.safe_substitute(self._get_chapterMapping(chId, dispNumber)))
 
             # Process sections.
-            sectionLines, sectionNumber, wordsTotal, lettersTotal = self._get_sections(
+            sectionLines, sectionNumber, wordsTotal = self._get_sections(
                 chId,
                 sectionNumber,
                 wordsTotal
@@ -299,18 +298,9 @@ class XtgFile(FileExport):
 
             # Process chapter ending.
             template = None
-            if self.novel.chapters[chId].chType == 2:
-                if self._todoChapterEndTemplate:
-                    template = Template(self._todoChapterEndTemplate)
-            elif self.novel.chapters[chId].chType == 1:
-                if self._notesChapterEndTemplate:
-                    template = Template(self._notesChapterEndTemplate)
-            elif self.novel.chapters[chId].chType == 3:
+            if self.novel.chapters[chId].chType != 0:
                 if self._unusedChapterEndTemplate:
                     template = Template(self._unusedChapterEndTemplate)
-            elif doNotExport:
-                if self._notExportedChapterEndTemplate:
-                    template = Template(self._notExportedChapterEndTemplate)
             elif self._chapterEndTemplate:
                 template = Template(self._chapterEndTemplate)
             if template is not None:
@@ -351,7 +341,7 @@ class XtgFile(FileExport):
         Return a message beginning with the ERROR constant in case of error.
         Extends the superclass method for the 'document per chapter' option.
         """
-        self._novxParser = NovxToYw7()
+        self._novxParser = NovxToShortcode()
         self.novel.get_languages()
         if self._perChapter:
             self._get_chapters()

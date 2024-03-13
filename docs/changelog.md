@@ -5,6 +5,12 @@
 ## Changelog
 
 
+### v2.2.0
+
+Update for novxlib v3.0, adding date-related placeholders for the section export.
+
+Based on novxlib v3.0.0
+
 ### v2.1.1
 
 Library update.

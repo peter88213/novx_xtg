@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### v2.3.0
+
+- Library update. Now reading *.novx* version 1.2 files.
+
+Based on novxlib v3.2.0
+Compatibility: novelibre v3.5 API
+
 ### v2.2.1
 
 Provide localized weekday and month names for all languages.

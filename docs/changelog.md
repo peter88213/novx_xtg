@@ -5,12 +5,17 @@
 ## Changelog
 
 
+### v2.4.0
+
+- Library update. Now reading *.novx* version 1.3 files.
+
+Based on novxlib v3.3.0
+
 ### v2.3.0
 
 - Library update. Now reading *.novx* version 1.2 files.
 
 Based on novxlib v3.2.0
-Compatibility: novelibre v3.5 API
 
 ### v2.2.1
 

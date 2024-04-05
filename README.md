@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.4.0.zip)
+[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.4.1.zip)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
 [![User guide](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/novx_xtg/)
@@ -9,6 +9,8 @@
 The novx_xtg Python script exports [novelibre](https://github.com/peter88213/novelibre/) projects as a whole in the *XPress Tags* format for the Quark XPress DTP software. It generates an XTG file ready for import into a QX book project. This is done based on template files for chapters and sections, so you can be quite flexible with the program output. In addition, the exporter script can take some routine work off your hands, for example, formatting figures and acronyms in a special way, if desired. Formatting codes and paragraph/character style tags are read from a configuration file.
 Optionally, one XTG file per chapter can be generated.
 
+![Screenshot](docs/Screenshots/screen01.png)
+
 ## Requirements
 
 - Windows.
@@ -16,9 +18,9 @@ Optionally, one XTG file per chapter can be generated.
 
 ## Download and install
 
-[Download the latest release (version 2.4.0)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.4.0.zip)
+[Download the latest release (version 2.4.1)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.4.1.zip)
 
-- Extract the "novx_xtg_v2.4.0" folder from the downloaded zipfile "novx_xtg_v2.4.0.zip".
+- Extract the "novx_xtg_v2.4.1" folder from the downloaded zipfile "novx_xtg_v2.4.1.zip".
 - Move into this new folder and launch **setup.pyw**. This installs the script for the local user.
 - Create a shortcut on the desktop when asked.
 - Open "README.md" for further instructions.

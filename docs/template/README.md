@@ -9,6 +9,8 @@
 The novx_xtg Python script exports [novelibre](https://github.com/peter88213/novelibre/) projects as a whole in the *XPress Tags* format for the Quark XPress DTP software. It generates an XTG file ready for import into a QX book project. This is done based on template files for chapters and sections, so you can be quite flexible with the program output. In addition, the exporter script can take some routine work off your hands, for example, formatting figures and acronyms in a special way, if desired. Formatting codes and paragraph/character style tags are read from a configuration file.
 Optionally, one XTG file per chapter can be generated.
 
+![Screenshot](docs/Screenshots/screen01.png)
+
 ## Requirements
 
 - Windows.

@@ -5,6 +5,12 @@
 ## Changelog
 
 
+### v2.4.1
+
+- Fix a bug where the "figure" style tags are messed up. 
+
+Based on novxlib v3.3.0
+
 ### v2.4.0
 
 - Library update. Now reading *.novx* version 1.3 files.

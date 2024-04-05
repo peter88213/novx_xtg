@@ -112,12 +112,16 @@ class XtgFile(FileExport):
             self._novxParser.feed(f'<Content>{text}</Content>')
             text = ''.join(self._novxParser.textList).strip()
 
+            # Escape XPress Tags code-specific characters.
+            for yw, xt in xtgReplacements:
+                text = text.replace(yw, xt)
+
             #--- Assign "figure" style.
             # In order not to interfere with numeric language codes, this runs before the general replacements.
             text = re.sub('(\d+)', f'{self._tagFigure}\\1{self._tagFigure0}', text)
 
             #--- Apply xtg formatting.
-            xtgReplacements.extend([
+            xtgReplacements = ([
                 # Replace yWriter tags with XPress tags.
                 ('[i]', self._tagItalic),
                 ('[/i]', self._tagItalic0),

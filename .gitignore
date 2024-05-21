@@ -1,6 +1,6 @@
 /test/temp/
 /test/work/
-/test/novx_xtg.pyw
+/test/novx_xtg.py
 /build/
 *.pyc
 *.bak

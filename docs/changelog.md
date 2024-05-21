@@ -5,11 +5,11 @@
 ## Changelog
 
 
-### v2.5.1
+### v2.5.2
 
 - Library update. Now reading *.novx* version 1.4 files.
 
-Based on novxlib v4.0.1
+Based on novxlib v4.0.2
 
 ### v2.4.1
 

@@ -93,7 +93,7 @@ def open_folder(installDir):
                 pass
 
 
-def install(novxPath, zipped=True):
+def install(novxPath, zipped):
     """Install the script."""
     if zipped:
         copy_file = extract_file
@@ -186,7 +186,7 @@ def main(zipped=True):
     homePath = str(Path.home()).replace('\\', '/')
     novxlibPath = f'{homePath}/.novx/'
     try:
-        install(novxlibPath)
+        install(novxlibPath, zipped)
     except Exception as ex:
         output(str(ex))
 

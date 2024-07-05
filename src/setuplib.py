@@ -12,7 +12,6 @@ import zipfile
 import os
 import sys
 import stat
-import zipfile
 from shutil import rmtree
 from pathlib import Path
 from string import Template
@@ -70,6 +69,34 @@ def cp_tree(sourceDir, targetDir):
     copytree(sourceDir, f'{targetDir}/{sourceDir}', dirs_exist_ok=True)
 
 
+def extract_config(cnfDir):
+    with zipfile.ZipFile(pyz) as z:
+        for file in z.namelist():
+            if file.startswith(SAMPLE_PATH):
+                targetFile = file.replace(SAMPLE_PATH, '')
+                if not targetFile:
+                    continue
+                if not os.path.isfile(f'{cnfDir}{targetFile}'):
+                    output(f'Copying "{cnfDir}{targetFile}"')
+                    with open(f'{cnfDir}{targetFile}', 'wb') as f:
+                        f.write(z.read(file))
+                else:
+                    output(f'Keeping "{cnfDir}{targetFile}"')
+
+
+def cp_config(cnfDir):
+    try:
+        with os.scandir(SAMPLE_PATH) as files:
+            for file in files:
+                if not os.path.isfile(f'{cnfDir}{file.name}'):
+                    copy2(f'{SAMPLE_PATH}{file.name}', f'{cnfDir}{file.name}')
+                    output(f'Copying "{file.name}"')
+                else:
+                    output(f'Keeping "{file.name}"')
+    except:
+        pass
+
+
 def output(text):
     message.append(text)
     processInfo.config(text=('\n').join(message))
@@ -98,9 +125,11 @@ def install(novxPath, zipped):
     if zipped:
         copy_file = extract_file
         copy_tree = extract_tree
+        copy_config = extract_config
     else:
         copy_file = copy2
         copy_tree = cp_tree
+        copy_config = cp_config
 
     #--- Relocate the v1.x installation directory, if necessary.
     message = relocate.main()
@@ -146,18 +175,7 @@ def install(novxPath, zipped):
     os.chmod(f'{installDir}/{APP}', st.st_mode | stat.S_IEXEC)
 
     # Install configuration files and sample templates.
-    with zipfile.ZipFile(pyz) as z:
-        for file in z.namelist():
-            if file.startswith(SAMPLE_PATH):
-                targetFile = file.replace(SAMPLE_PATH, '')
-                if not targetFile:
-                    continue
-                if not os.path.isfile(f'{cnfDir}{targetFile}'):
-                    output(f'Copying "{cnfDir}{targetFile}"')
-                    with open(f'{cnfDir}{targetFile}', 'wb') as f:
-                        f.write(z.read(file))
-                else:
-                    output(f'Keeping "{cnfDir}{targetFile}"')
+    copy_config(cnfDir)
 
     # Display a success message.
     mapping = {'Appname': APPNAME, 'Apppath': f'{installDir}/{APP}'}

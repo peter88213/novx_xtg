@@ -69,34 +69,6 @@ def cp_tree(sourceDir, targetDir):
     copytree(sourceDir, f'{targetDir}/{sourceDir}', dirs_exist_ok=True)
 
 
-def extract_config(cnfDir):
-    with zipfile.ZipFile(pyz) as z:
-        for file in z.namelist():
-            if file.startswith(SAMPLE_PATH):
-                targetFile = file.replace(SAMPLE_PATH, '')
-                if not targetFile:
-                    continue
-                if not os.path.isfile(f'{cnfDir}{targetFile}'):
-                    output(f'Copying "{cnfDir}{targetFile}"')
-                    with open(f'{cnfDir}{targetFile}', 'wb') as f:
-                        f.write(z.read(file))
-                else:
-                    output(f'Keeping "{cnfDir}{targetFile}"')
-
-
-def cp_config(cnfDir):
-    try:
-        with os.scandir(SAMPLE_PATH) as files:
-            for file in files:
-                if not os.path.isfile(f'{cnfDir}{file.name}'):
-                    copy2(f'{SAMPLE_PATH}{file.name}', f'{cnfDir}{file.name}')
-                    output(f'Copying "{file.name}"')
-                else:
-                    output(f'Keeping "{file.name}"')
-    except:
-        pass
-
-
 def output(text):
     message.append(text)
     processInfo.config(text=('\n').join(message))
@@ -125,11 +97,9 @@ def install(novxPath, zipped):
     if zipped:
         copy_file = extract_file
         copy_tree = extract_tree
-        copy_config = extract_config
     else:
         copy_file = copy2
         copy_tree = cp_tree
-        copy_config = cp_config
 
     #--- Relocate the v1.x installation directory, if necessary.
     message = relocate.main()
@@ -156,11 +126,14 @@ def install(novxPath, zipped):
 
     # Delete the old version, but retain configuration, if any.
     rmtree(f'{installDir}/icons', ignore_errors=True)
+    rmtree(f'{installDir}/sample', ignore_errors=True)
     with os.scandir(installDir) as files:
         for file in files:
-            if not 'config' in file.name:
-                os.remove(file)
-                output(f'Removing "{file.name}"')
+            if 'config' in file.name:
+                continue
+
+            os.remove(file)
+            output(f'Removing "{file.name}"')
 
     # Install the new version.
     output(f'Copying "{APP}" ...')
@@ -174,8 +147,9 @@ def install(novxPath, zipped):
     st = os.stat(f'{installDir}/{APP}')
     os.chmod(f'{installDir}/{APP}', st.st_mode | stat.S_IEXEC)
 
-    # Install configuration files and sample templates.
-    copy_config(cnfDir)
+    # Provide the sample files.
+    output('Copying sample files ...')
+    copy_tree('sample', installDir)
 
     # Display a success message.
     mapping = {'Appname': APPNAME, 'Apppath': f'{installDir}/{APP}'}

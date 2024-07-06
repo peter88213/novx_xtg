@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.5.2.pyzw)
+[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.5.3.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
 [![User guide](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/novx_xtg/)
@@ -20,16 +20,16 @@ Optionally, one XTG file per chapter can be generated.
 
 ### Default: Executable Python zip archive
 
-Download the latest release [novx_xtg_v2.5.2.pyzw](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v2.5.2.pyzw)
+Download the latest release [novx_xtg_v2.5.3.pyzw](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v2.5.3.pyzw)
 
-- Launch *novx_xtg_v2.5.2.pyzw* by double-clicking (Windows/Linux desktop),
-- or execute `python novx_xtg_v2.5.2.pyzw` (Windows), resp. `python3 novx_xtg_v2.5.2.pyzw` (Linux) on the command line.
+- Launch *novx_xtg_v2.5.3.pyzw* by double-clicking (Windows/Linux desktop),
+- or execute `python novx_xtg_v2.5.3.pyzw` (Windows), resp. `python3 novx_xtg_v2.5.3.pyzw` (Linux) on the command line.
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [novx_xtg_v2.5.2.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v2.5.2.zip)
+The package is also available in zip format: [novx_xtg_v2.5.3.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v2.5.3.zip)
 
-- Extract the *novx_xtg_v2.5.2* folder from the downloaded zipfile "novx_xtg_v2.5.2.zip".
+- Extract the *novx_xtg_v2.5.3* folder from the downloaded zipfile "novx_xtg_v2.5.3.zip".
 - Move into this new folder and launch *setup.pyw* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.pyw` (Windows), resp. `python3 setup.pyw` (Linux) on the command line.
 

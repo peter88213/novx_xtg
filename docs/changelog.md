@@ -5,6 +5,12 @@
 ## Changelog
 
 
+### v2.5.3
+
+- Library update.
+
+Based on novxlib v4.3.0
+
 ### v2.5.2
 
 - Library update. Now reading *.novx* version 1.4 files.

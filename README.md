@@ -25,6 +25,18 @@ Download the latest release [novx_xtg_v2.5.3.pyzw](https://github.com/peter88213
 - Launch *novx_xtg_v2.5.3.pyzw* by double-clicking (Windows/Linux desktop),
 - or execute `python novx_xtg_v2.5.3.pyzw` (Windows), resp. `python3 novx_xtg_v2.5.3.pyzw` (Linux) on the command line.
 
+#### Important
+
+Many web browsers recognize the download as an executable file and offer to open it immediately. 
+This starts the installation.
+
+However, depending on the security settings, the browser may 
+initially  refuse  to download the executable file. 
+In this case, your confirmation or an additional action is required. 
+If this is not possible, you have the option of downloading 
+the zip file. 
+
+
 ### Alternative: Zip file
 
 The package is also available in zip format: [novx_xtg_v2.5.3.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v2.5.3.zip)

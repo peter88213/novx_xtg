@@ -79,7 +79,7 @@ class XtgFile(FileExport):
         self._perChapter = kwargs['per_chapter']
         self._LanguageCodes = kwargs['language_codes']
 
-    def _convert_from_novx(self, text, append=False, xml=False, quick=False):
+    def _convert_from_novx(self, text, quick=False, **kwargs):
         """Return text, converted from novx markup to XTG format.
         
         Positional arguments:

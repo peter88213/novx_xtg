@@ -118,7 +118,7 @@ class XtgFile(FileExport):
 
             #--- Assign "figure" style.
             # In order not to interfere with numeric language codes, this runs before the general replacements.
-            text = re.sub('(\d+)', f'{self._tagFigure}\\1{self._tagFigure0}', text)
+            text = re.sub(r'(\d+)', f'{self._tagFigure}\\1{self._tagFigure0}', text)
 
             #--- Apply xtg formatting.
             xtgReplacements = ([
@@ -151,15 +151,15 @@ class XtgFile(FileExport):
 
             #--- Adjust digit-separating blanks.
             if self._adjustDigits:
-                text = re.sub('(\d) (\d)', '\\1<\\![>\\2', text)
+                text = re.sub(r'(\d) (\d)', '\\1<\\![>\\2', text)
 
             #--- Space digit-separating points.
             if self._spacePoints:
-                text = re.sub('(\d+)\.', '\\1.<\\![>', text)
+                text = re.sub(r'(\d+)\.', '\\1.<\\![>', text)
                 text = text.replace('<\\![> ', ' ')
 
             #--- Assign "acronym" style.
-            text = re.sub('([A-ZÄ-Ü]{2,})', f'{self._tagAcronym}\\1{self._tagAcronym0}', text)
+            text = re.sub(r'([A-ZÄ-Ü]{2,})', f'{self._tagAcronym}\\1{self._tagAcronym0}', text)
         else:
             text = ''
         return text
@@ -316,7 +316,7 @@ class XtgFile(FileExport):
 
             # Fix the tags of indented paragraphs.
             # This is done here to include the section openings.
-            text = re.sub('\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
+            text = re.sub(r'\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
             xtgPath = f'{xtgDir}/{dispNumber:04}_{self.novel.chapters[chId].title}{self.EXTENSION}'
             try:
                 with open(xtgPath, 'w', encoding='utf-8') as f:
@@ -336,7 +336,7 @@ class XtgFile(FileExport):
 
         # Fix the tags of indented paragraphs.
         # This is done here to include the section openings.
-        text = re.sub('\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
+        text = re.sub(r'\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
         return text
 
     def write(self):

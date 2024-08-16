@@ -5,6 +5,12 @@
 ## Changelog
 
 
+### Version 2.5.4
+
+- Refactor for future Python versions.
+
+Based on novxlib version 4.5.8
+
 ### Version 2.5.3
 
 - Library update.

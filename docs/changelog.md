@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 2.5.5
+
+Library update:
+- Rejecting malformed .novx files.
+- Refactor for future Python versions
+
+Based on novxlib 4.6.3
+
 ### Version 2.5.4
 
 - Refactor for future Python versions.

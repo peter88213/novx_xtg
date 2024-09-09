@@ -1,33 +1,51 @@
-"""Build a Python script for the novx_xtg distribution.
+"""Build the novx_xtg application package.
         
 In order to distribute a single script without dependencies, 
 this script "inlines" all modules imported from the novxlib package.
 
-The novxlib library (see see https://github.com/peter88213/novxlib)
-must be located on the same directory level as the novx_xtg project. 
+The novxlib project (see see https://github.com/peter88213/novxlib)
+must be located on the same directory level as the novelibre project. 
 
-Copyright (c) 2024 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
-Published under the MIT License (https://opensource.org/licenses/mit-license.php)
+License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
+from shutil import copytree
 import sys
-sys.path.insert(0, f'{os.getcwd()}/../../novxlib/src')
-import inliner
 
-SOURCE_DIR = '../src/'
-TEST_DIR =  '../test/'
-SOURCE_FILE = f'{SOURCE_DIR}novx_xtg_.py'
-TEST_FILE = f'{TEST_DIR}novx_xtg.py'
+sys.path.insert(0, f'{os.getcwd()}/../../novelibre/tools')
+from package_builder import PackageBuilder
+
+VERSION = '2.5.4'
+
+
+class ApplicationBuilder(PackageBuilder):
+
+    PRJ_NAME = 'novx_xtg'
+    LOCAL_LIB = 'nvxtglib'
+
+    def __init__(self, version):
+        super().__init__(version)
+        self.distFiles.append(
+            (f'{self.sourceDir}relocate.py', self.buildDir)
+            )
+        self.sourceFile = f'{self.sourceDir}{self.PRJ_NAME}_.py'
+
+    def add_extras(self):
+        self.add_icons()
+        self.add_sample()
+
+    def add_sample(self):
+        print('\nAdding sample files ...')
+        SAMPLE_DIR = '../sample'
+        copytree(SAMPLE_DIR, f'{self.buildDir}/sample')
 
 
 def main():
-    inliner.run(SOURCE_FILE, TEST_FILE, 'nvxtglib', '../src/', copynovxlib=False)
-    inliner.run(TEST_FILE, TEST_FILE, 'novxlib', '../../novxlib/src/', copynovxlib=False)
-    # inliner.run(SOURCE_FILE, TEST_FILE, 'nvxtglib', '../src/')
-    # inliner.run(TEST_FILE, TEST_FILE, 'novxlib', '../src/')
-    print('Done.')
+    ab = ApplicationBuilder(VERSION)
+    ab.run()
 
 
 if __name__ == '__main__':
     main()
+

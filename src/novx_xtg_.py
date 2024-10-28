@@ -7,11 +7,12 @@ For further information see https://github.com/peter88213/novx_xtg
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
-import sys
 from pathlib import Path
-from novxlib.ui.ui_tk import UiTk
+import sys
+
+from apptk.view.set_icon_tk import set_icon
 from novxlib.ui.ui import Ui
-from novxlib.ui.set_icon_tk import set_icon
+from novxlib.ui.ui_tk import UiTk
 from nvxtglib.xtg_config import XtgConfig
 from nvxtglib.xtg_exporter import XtgExporter
 

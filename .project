@@ -3,6 +3,7 @@
 	<name>novx_xtg</name>
 	<comment></comment>
 	<projects>
+		<project>apptk</project>
 		<project>novelibre</project>
 		<project>novxlib</project>
 	</projects>

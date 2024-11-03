@@ -10,7 +10,7 @@ from string import Template
 
 from nvlib.model.file.file_export import FileExport
 from nvlib.novx_globals import *
-from nvyw7lib.novx_to_shortcode import NovxToShortcode
+from nvxtglib.novx_to_shortcode import NovxToShortcode
 
 
 class XtgFile(FileExport):

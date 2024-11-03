@@ -6,7 +6,7 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
 import json
-from novxlib.config.configuration import Configuration
+from nvlib.configuration.configuration import Configuration
 
 
 class XtgConfig(Configuration):

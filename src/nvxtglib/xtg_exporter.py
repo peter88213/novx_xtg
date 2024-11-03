@@ -4,8 +4,8 @@ Copyright (c) 2024 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-from novxlib.converter.converter_ff import ConverterFf
-from novxlib.novx.novx_file import NovxFile
+from nvlib.model.converter.converter_ff import ConverterFf
+from nvlib.model.novx.novx_file import NovxFile
 from nvxtglib.xtg_file import XtgFile
 
 

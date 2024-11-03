@@ -8,9 +8,9 @@ import re
 import shutil
 from string import Template
 
-from novxlib.file.file_export import FileExport
-from novxlib.novx_globals import *
-from novxlib.shortcode.novx_to_shortcode import NovxToShortcode
+from nvlib.model.file.file_export import FileExport
+from nvlib.novx_globals import *
+from nvyw7lib.novx_to_shortcode import NovxToShortcode
 
 
 class XtgFile(FileExport):

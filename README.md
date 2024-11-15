@@ -1,6 +1,6 @@
 [![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v2.5.5.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
-[![News](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions/1)
+[![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
 [![User guide](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/novx_xtg/)
 
 

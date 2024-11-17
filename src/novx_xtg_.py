@@ -10,9 +10,9 @@ import os
 from pathlib import Path
 import sys
 
+from mvclib.user_interface.ui_tk import UiTk
 from mvclib.view.set_icon_tk import set_icon
 from mvclib.view.ui import Ui
-from novxlib.ui.ui_tk import UiTk
 from nvxtglib.xtg_config import XtgConfig
 from nvxtglib.xtg_exporter import XtgExporter
 

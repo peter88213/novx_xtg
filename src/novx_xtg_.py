@@ -11,8 +11,8 @@ from pathlib import Path
 import sys
 
 from nvlib.gui.user_interface.ui_tk import UiTk
-from mvclib.view.set_icon_tk import set_icon
-from mvclib.view.ui import Ui
+from nvlib.gui.set_icon_tk import set_icon
+from nvlib.gui.user_interface.ui import Ui
 from nvxtglib.xtg_config import XtgConfig
 from nvxtglib.xtg_exporter import XtgExporter
 

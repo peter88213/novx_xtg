@@ -4,12 +4,12 @@ Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-from nvlib.model.converter.converter_ff import ConverterFf
+from nvlib.model.converter.converter import Converter
 from nvlib.model.novx.novx_file import NovxFile
 from nvxtglib.xtg_file import XtgFile
 
 
-class XtgExporter(ConverterFf):
+class XtgExporter(Converter):
     """A converter class for XPress tagged file export.
 
     Class constants:

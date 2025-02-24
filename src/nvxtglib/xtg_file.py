@@ -190,11 +190,9 @@ class XtgFile(FileExport):
         ]
 
         def number_to_roman(n):
-            """Return n as a Roman number.
-
-            Credit goes to the user 'Aristide' on stack overflow.
-            https://stackoverflow.com/a/47713392
-            """
+            # Return n as a Roman number.
+            # Credit goes to the user "Aristide" on stack overflow.
+            # https://stackoverflow.com/a/47713392
             result = []
             for (arabic, roman) in ROMAN:
                 (factor, n) = divmod(n, arabic)
@@ -212,11 +210,9 @@ class XtgFile(FileExport):
         )
 
         def number_to_english(n):
-            """Return n as a number written out in English.
-
-            Credit goes to the user 'Hunter_71' on stack overflow.
-            https://stackoverflow.com/a/51849443
-            """
+            # Return n as a number written out in English.
+            # Credit goes to the user 'Hunter_71' on stack overflow.
+            # https://stackoverflow.com/a/51849443
             if any(not x.isdigit() for x in str(n)):
                 return ''
 

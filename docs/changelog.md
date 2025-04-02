@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 5.0.3
+
+- Fixed setup script.
+
+Based on novelibre 5.18.0
+
+
 ### Version 5.0.2
 
 - Fix import.

@@ -43,7 +43,7 @@ On Windows, open the installation folder, hold down the Alt key on your keyboard
 and then drag and drop $Appname.py to your desktop.
 
 On Linux, create a launcher on your desktop. With xfce for instance, the launcher's command may look like this:
-python3 '$Apppath' %F
+python3 /home/peter/.novx/novx_xtg/novx_xtg.py %F
 '''
 
 root = Tk()

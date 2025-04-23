@@ -5,6 +5,15 @@
 ## Changelog
 
 
+### Version 5.1.0 
+
+New chapter placeholders:
+-   `$Epigraph` - Epigraph
+-   `$EpigraphSrc` - Epigraph source
+
+Based on novelibre 5.21.0
+
+
 ### Version 5.0.3
 
 - Fixed setup script.

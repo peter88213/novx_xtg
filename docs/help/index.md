@@ -1,6 +1,6 @@
 [Project homepage](https://github.com/peter88213/novx_xtg) > [Index](https://peter88213.github.io/novx_xtg/) > User guide
 
----
+----------------------------------------------------------------------------
 
 # novx_xtg User guide
 
@@ -36,7 +36,7 @@ The path of the novelibre project file.
 `--silent` suppress error messages and the request to confirm the use of
 default values
 
----
+----------------------------------------------------------------------------
 
 ## General
 
@@ -70,7 +70,7 @@ novelibre's "proof read" function.
 -   If a template file or a configuration entry is missing, *novx_xtg*
     uses the lower priority source as a fallback.
 
----
+----------------------------------------------------------------------------
 
 **Hint**
 
@@ -82,7 +82,7 @@ under
 
 You best make a copy and edit it.
 
----
+----------------------------------------------------------------------------
 
 ### Configuration file
 
@@ -184,7 +184,9 @@ per_chapter = No
 You can define styles in `fileHeader.XTG`, but it is preferable to use
 the names of styles that already exist in the QX book project instead.
 
-## List of templates
+----------------------------------------------------------------------------
+
+## Templates
 
 ### Project level templates
 
@@ -207,6 +209,8 @@ the names of styles that already exist in the QX book project instead.
 -   `sectionDivider.XTG` - Section divider placed between sections.
 -   `appendedSectionTemplate.XTG` - Applied to sections to be appended
     to the previous section.
+
+----------------------------------------------------------------------------
 
 ## Placeholders
 

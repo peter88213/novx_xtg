@@ -5,6 +5,14 @@
 ## Changelog
 
 
+### Version 5.2.0
+
+- New section template: `appended_section_template.XTG`.
+- Updated instructions for use.
+
+Based on novelibre 5.23.0
+
+
 ### Version 5.1.0 
 
 New chapter placeholders:

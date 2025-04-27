@@ -1,7 +1,6 @@
-![external-link](../_images/external-link.png)
-[Deutsch](https://peter88213.github.io/nvhelp-de/novx_xtg)
+[Project homepage](https://github.com/peter88213/novx_xtg) > [Index](..) > User guide
 
-------------------------------------------------------------------------
+---
 
 # novx_xtg
 
@@ -18,9 +17,8 @@ novelibre project and fills XTG templates.
 ### Intended usage
 
 The included installation script prompts you to create a shortcut on the desktop.
-
-:   You can launch the program by dragging a novelibre project file and
-    dropping it on the shortcut icon.
+You can launch the program by dragging a novelibre project file and
+dropping it on the shortcut icon.
 
 ### Command line usage
 

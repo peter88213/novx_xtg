@@ -23,7 +23,7 @@ Alternatively, you can
     file as an argument, or
 -   launch the program via a batch file.
 
-usage: `novx_xtg.pyw [--silent] Sourcefile`
+usage: `novx_xtg.py [--silent] Sourcefile`
 
 #### positional arguments:
 
@@ -303,9 +303,11 @@ There are two options:
 -   `$CustomConflict` - Custom "Conflict" field title
 -   `$CustomOutcome` - Custom "Outcome" field title
 
+----------------------------------------------------------------------------
+
 ## Installation path
 
-The setup script installs *novx_xtg.pyw* in a defined place. This is the
+The setup script installs *novx_xtg.py* in a defined place. This is the
 installation path on Windows:
 
 `c:\Users\<user name>.novx\novx_xtg`

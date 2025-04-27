@@ -1,4 +1,4 @@
-[Project homepage](https://github.com/peter88213/novx_xtg) > [Index](..) > User guide
+[Project homepage](https://github.com/peter88213/novx_xtg) > [Index](https://peter88213.github.io/novx_xtg/) > User guide
 
 ---
 

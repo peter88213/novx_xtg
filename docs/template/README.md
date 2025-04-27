@@ -51,7 +51,7 @@ The package is also available in zip format: [novx_xtg_v0.99.0.zip](https://gith
 
 ## Usage
 
-See the [online manual](https://peter88213.github.io/novx_xtg/help/)
+See the [user guide](https://peter88213.github.io/nv_custom_export/help/)
 
 ## Credits
 

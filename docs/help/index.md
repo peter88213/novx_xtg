@@ -93,65 +93,69 @@ You best make a copy and edit it.
 
 This is the configuration file explained:
 
-    [STYLES]
-    first_paragraph = @Text body:
+```Ini
 
-    # XPress tag for paragraphs preceded by a heading or a blank line.
+[STYLES]
+first_paragraph = @Text body:
 
-    indented_paragraph = @Text body indent:
+# XPress tag for paragraphs preceded by a heading or a blank line.
 
-    # XPress tag for indented paragraphs.
+indented_paragraph = @Text body indent:
 
-    other_paragraph = @First line indent:
+# XPress tag for indented paragraphs.
 
-    # XPress tag for regular paragraphs.
+other_paragraph = @First line indent:
 
-    italic = <@Emphasis>
+# XPress tag for regular paragraphs.
 
-    # XPress tag opening italic sections. 
+italic = <@Emphasis>
 
-    italic0 = <@$p>
+# XPress tag opening italic sections. 
 
-    # XPress tag closing italic sections.
+italic0 = <@$p>
 
-    bold = <@Strong emphasis>
+# XPress tag closing italic sections.
 
-    # XPress tag opening bold sections.
+bold = <@Strong emphasis>
 
-    bold0 = <@$p>
+# XPress tag opening bold sections.
 
-    # XPress tag closing bold sections.
+bold0 = <@$p>
 
-    acronym =
+# XPress tag closing bold sections.
 
-    # XPress tag opening acronyms.
+acronym =
 
-    acronym0 = 
+# XPress tag opening acronyms.
 
-    # XPress tag closing acronyms.
+acronym0 = 
 
-    figure =
+# XPress tag closing acronyms.
 
-    # XPress tag opening figure groups.
+figure =
 
-    figure0 = 
+# XPress tag opening figure groups.
 
-    # XPress tag closing figure groups.
+figure0 = 
 
-    [OPTIONS]
+# XPress tag closing figure groups.
 
-    adjust_digits = Yes
+[OPTIONS]
 
-    # If Yes, adjust digit-separating blanks.
+adjust_digits = Yes
 
-    space_points = Yes
+# If Yes, adjust digit-separating blanks.
 
-    # If Yes, space digit-separating points.
+space_points = Yes
 
-    per_chapter = No
+# If Yes, space digit-separating points.
 
-    # If Yes, create one XTG file for each chapter.
-    # If No, create one XTG file for the entire document.
+per_chapter = No
+
+# If Yes, create one XTG file for each chapter.
+# If No, create one XTG file for the entire document.
+
+```
 
 #### Style tags
 

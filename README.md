@@ -1,7 +1,7 @@
 [![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v5.2.0.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
-[![User guide](docs/img/help-button.png)](https://peter88213.github.io/nvhelp-en/novx_xtg/)
+[![User guide](docs/img/help-button.png)](https://peter88213.github.io/novx_xtg/help/)
 
 
 # ![X](src/icons/xLogo32.png) novx_xtg
@@ -51,7 +51,7 @@ The package is also available in zip format: [novx_xtg_v5.2.0.zip](https://githu
 
 ## Usage
 
-See the [online manual](https://peter88213.github.io/nvhelp-en/novx_xtg/)
+See the [online manual](https://peter88213.github.io/novx_xtg/help/)
 
 ## Credits
 

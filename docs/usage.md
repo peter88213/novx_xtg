@@ -6,4 +6,4 @@ The novx_xtg Python script runs through all chapters and sections of a novelibre
 
 # Operation
 
-See the [online help](https://peter88213.github.io/novx_xtg/).
+See the [online help](https://peter88213.github.io/novx_xtg/help/).

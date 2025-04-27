@@ -4,10 +4,7 @@
 
 # novx_xtg User guide
 
-This page refers to the latest
-[novx_xtg](https://github.com/peter88213/novx_xtg/) release.
-
-The novx_xtg Python script runs through all chapters and sections of a
+The *novx_xtg* Python script runs through all chapters and sections of a
 novelibre project and fills XTG templates.
 
 ## Operation

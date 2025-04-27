@@ -93,7 +93,7 @@ You best make a copy and edit it.
 
 This is the configuration file explained:
 
-```Ini
+```ini
 
 [STYLES]
 first_paragraph = @Text body:

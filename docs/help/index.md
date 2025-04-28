@@ -311,3 +311,7 @@ The setup script installs *novx_xtg.py* in a defined place. This is the
 installation path on Windows:
 
 `c:\Users\<user name>.novx\novx_xtg`
+
+---
+
+Copyright (c) 2025 by Peter Triesberger. All rights reserved.

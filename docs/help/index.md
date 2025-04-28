@@ -2,7 +2,7 @@
 
 ----------------------------------------------------------------------------
 
-# novx_xtg User guide
+# User guide
 
 The *novx_xtg* Python script runs through all chapters and sections of a
 novelibre project and fills XTG templates.

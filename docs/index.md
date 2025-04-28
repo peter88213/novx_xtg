@@ -2,7 +2,7 @@
 
 ---
 
-# novx_xtg
+# Index
 
 Template-based XTG export for [novelibre](https://github.com/peter88213/novelibre/).
 

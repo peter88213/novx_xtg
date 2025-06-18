@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 5.3.0
+
+- Reading novx version 1.7 files.
+
+Based on novelibre 5.27.1
+
+
 ### Version 5.2.0
 
 - New section template: `appended_section_template.XTG`.

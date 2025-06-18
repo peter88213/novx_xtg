@@ -1,4 +1,4 @@
-[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v5.2.0.pyzw)
+[![Download the latest release](docs/img/download-button.png)](https://raw.githubusercontent.com/peter88213/novx_xtg/main/dist/novx_xtg_v5.3.0.pyzw)
 [![Changelog](docs/img/changelog-button.png)](docs/changelog.md)
 [![News/Feedback](docs/img/news-button.png)](https://github.com/peter88213/novelibre/discussions)
 [![User guide](docs/img/help-button.png)](https://peter88213.github.io/novx_xtg/help/)
@@ -20,10 +20,10 @@ Optionally, one XTG file per chapter can be generated.
 
 ### Default: Executable Python zip archive
 
-Download the latest release [novx_xtg_v5.2.0.pyzw](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.2.0.pyzw)
+Download the latest release [novx_xtg_v5.3.0.pyzw](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.3.0.pyzw)
 
-- Launch *novx_xtg_v5.2.0.pyzw* by double-clicking (Windows/Linux desktop),
-- or execute `python novx_xtg_v5.2.0.pyzw` (Windows), resp. `python3 novx_xtg_v5.2.0.pyzw` (Linux) on the command line.
+- Launch *novx_xtg_v5.3.0.pyzw* by double-clicking (Windows/Linux desktop),
+- or execute `python novx_xtg_v5.3.0.pyzw` (Windows), resp. `python3 novx_xtg_v5.3.0.pyzw` (Linux) on the command line.
 
 #### Important
 
@@ -39,9 +39,9 @@ the zip file.
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [novx_xtg_v5.2.0.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.2.0.zip)
+The package is also available in zip format: [novx_xtg_v5.3.0.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.3.0.zip)
 
-- Extract the *novx_xtg_v5.2.0* folder from the downloaded zipfile "novx_xtg_v5.2.0.zip".
+- Extract the *novx_xtg_v5.3.0* folder from the downloaded zipfile "novx_xtg_v5.3.0.zip".
 - Move into this new folder and launch *setup.pyw* by double-clicking (Windows/Linux desktop), 
 - or execute `python setup.pyw` (Windows), resp. `python3 setup.pyw` (Linux) on the command line.
 

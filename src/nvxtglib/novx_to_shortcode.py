@@ -117,7 +117,9 @@ class NovxToShortcode(sax.ContentHandler):
 
             if name == 'note':
                 noteClass = xmlAttributes.get('class', 'footnote')
-                self.textList.append(f"{self.NOTE_TYPES.get(noteClass, '@fn')} ")
+                self.textList.append(
+                    f"{self.NOTE_TYPES.get(noteClass, '@fn')} "
+                )
             return
 
         if name in ('creator', 'date', 'note-citation'):

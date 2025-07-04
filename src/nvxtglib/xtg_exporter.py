@@ -13,8 +13,10 @@ class XtgExporter(Converter):
     """A converter class for XPress tagged file export.
 
     Class constants:
-        EXPORT_SOURCE_CLASSES -- List of YwFile subclasses from which can be exported.
-        EXPORT_TARGET_CLASSES -- List of FileExport subclasses to which export is possible.
+        EXPORT_SOURCE_CLASSES -- List of YwFile subclasses 
+                                 from which can be exported.
+        EXPORT_TARGET_CLASSES -- List of FileExport subclasses 
+                                 to which export is possible.
     """
     EXPORT_SOURCE_CLASSES = [NovxFile]
     EXPORT_TARGET_CLASSES = [XtgFile]

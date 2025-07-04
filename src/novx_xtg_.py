@@ -71,7 +71,10 @@ def main(sourcePath, silentMode=True, installDir='.'):
     if not sourceDir:
         sourceDir = '.'
     iniFileName = f'{APPNAME}.ini'
-    iniFiles = [f'{installDir}/config/{iniFileName}', f'{sourceDir}/{APPNAME}/{iniFileName}']
+    iniFiles = [
+        f'{installDir}/config/{iniFileName}',
+        f'{sourceDir}/{APPNAME}/{iniFileName}',
+    ]
     configuration = XtgConfig(STYLES, OPTIONS, TEMPLATES, LOOKUP)
     for iniFile in iniFiles:
         configuration.read(iniFile)

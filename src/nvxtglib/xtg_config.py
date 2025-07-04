@@ -43,13 +43,21 @@ class XtgConfig(Configuration):
         iniPath = os.path.dirname(iniFile)
         for template in self.templates:
             try:
-                with open(f'{iniPath}/{template}.XTG', 'r', encoding='utf-8') as f:
+                with open(
+                    f'{iniPath}/{template}.XTG',
+                    'r',
+                    encoding='utf-8',
+                ) as f:
                     self.templates[template] = f.read()
             except:
                 pass
         for lookup in self.lookup:
             try:
-                with open(f'{iniPath}/{lookup}.json', 'r', encoding='utf-8') as f:
+                with open(
+                    f'{iniPath}/{lookup}.json',
+                    'r',
+                    encoding='utf-8',
+                ) as f:
                     self.lookup[lookup] = json.load(f)
             except:
                 pass

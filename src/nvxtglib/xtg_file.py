@@ -34,11 +34,14 @@ class XtgFile(FileExport):
             file_header: str -- File header template.
             part_template: str -- Part heading template.
             chapter_template: str -- Chapter heading template.
-            first_section_template: str -- Template for the first section of the chapter.
+            first_section_template: str -- Template for the first section 
+                                           of the chapter.
             section_template: str -- Section template.
-            appended_section_template: str -- Template for sections appended to the previous one.
+            appended_section_template: str -- Template for sections appended 
+                                              to the previous one.
             section_divider: str -- Section divider.
-            first_paragraph: str -- XPress tag for paragraphs preceded by a heading or a blank line. 
+            first_paragraph: str -- XPress tag for paragraphs preceded by a heading 
+                                    or a blank line. 
             indented_paragraph: str -- XPress tag for indented paragraphs.
             other_paragraph: str -- XPress tag for regular paragraphs.
             italic: str -- XPress tag opening italic sections. 
@@ -86,7 +89,8 @@ class XtgFile(FileExport):
             text -- string to convert.
         
         Optional arguments:
-            quick: bool -- if True, apply a conversion mode for one-liners without formatting.
+            quick: bool -- if True, apply a conversion mode 
+                           for one-liners without formatting.
         
         Overrides the superclass method.
         """
@@ -117,8 +121,13 @@ class XtgFile(FileExport):
                 text = text.replace(yw, xt)
 
             #--- Assign "figure" style.
-            # In order not to interfere with numeric language codes, this runs before the general replacements.
-            text = re.sub(r'(\d+)', f'{self._tagFigure}\\1{self._tagFigure0}', text)
+            # In order not to interfere with numeric language codes,
+            # this runs before the general replacements.
+            text = re.sub(
+                r'(\d+)',
+                f'{self._tagFigure}\\1{self._tagFigure0}',
+                text
+            )
 
             #--- Apply xtg formatting.
             xtgReplacements = ([
@@ -140,7 +149,9 @@ class XtgFile(FileExport):
                     xtgReplacements.append((f'[lang={language}]', ''))
                     xtgReplacements.append((f'[/lang={language}]', ''))
                 else:
-                    xtgReplacements.append((f'[lang={language}]', f'<n{languageCode}>'))
+                    xtgReplacements.append(
+                        (f'[lang={language}]', f'<n{languageCode}>')
+                    )
                     xtgReplacements.append((f'[/lang={language}]', '<@$p>'))
 
             for yw, xt in xtgReplacements:
@@ -159,7 +170,11 @@ class XtgFile(FileExport):
                 text = text.replace('<\\![> ', ' ')
 
             #--- Assign "acronym" style.
-            text = re.sub(r'([A-ZÄ-Ü]{2,})', f'{self._tagAcronym}\\1{self._tagAcronym0}', text)
+            text = re.sub(
+                r'([A-ZÄ-Ü]{2,})',
+                f'{self._tagAcronym}\\1{self._tagAcronym0}',
+                text
+            )
         else:
             text = ''
         return text
@@ -202,11 +217,37 @@ class XtgFile(FileExport):
 
             return "".join(result)
 
-        TENS = {30: 'thirty', 40: 'forty', 50: 'fifty',
-                60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety'}
+        TENS = {
+            30: 'thirty',
+            40: 'forty',
+            50: 'fifty',
+            60: 'sixty',
+            70: 'seventy',
+            80: 'eighty',
+            90: 'ninety'
+        }
         ZERO_TO_TWENTY = (
-            'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
-            'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'
+            'zero',
+            'one',
+            'two',
+            'three',
+            'four',
+            'five',
+            'six',
+            'seven',
+            'eight',
+            'nine',
+            'ten',
+            'eleven',
+            'twelve',
+            'thirteen',
+            'fourteen',
+            'fifteen',
+            'sixteen',
+            'seventeen',
+            'eighteen',
+            'nineteen',
+            'twenty'
         )
 
         def number_to_english(n):
@@ -223,23 +264,34 @@ class XtgFile(FileExport):
                 return TENS[n]
 
             elif n < 100:
-                return f'{number_to_english(n - (n % 10))} {number_to_english(n % 10)}'
+                return (
+                    f'{number_to_english(n - (n % 10))} '
+                    f'{number_to_english(n % 10)}'
+                )
 
             elif n < 1000 and n % 100 == 0:
                 return f'{number_to_english(n / 100)} hundred'
 
             elif n < 1000:
-                return f'{number_to_english(n / 100)} hundred {number_to_english(n % 100)}'
+                return (
+                    f'{number_to_english(n / 100)} hundred '
+                    f'{number_to_english(n % 100)}'
+                )
 
             elif n < 1000000:
-                return f'{number_to_english(n / 1000)} thousand {number_to_english(n % 1000)}'
+                return (
+                    f'{number_to_english(n / 1000)} thousand '
+                    f'{number_to_english(n % 1000)}'
+                )
 
             return ''
 
         chapterMapping = super()._get_chapterMapping(chId, chapterNumber)
         if chapterNumber:
-            chapterMapping['ChNumberEnglish'] = number_to_english(chapterNumber).capitalize()
-            chapterMapping['ChNumberRoman'] = number_to_roman(chapterNumber)
+            chapterMapping['ChNumberEnglish'
+                           ] = number_to_english(chapterNumber).capitalize()
+            chapterMapping['ChNumberRoman'
+                           ] = number_to_roman(chapterNumber)
         else:
             chapterMapping['ChNumberEnglish'] = ''
             chapterMapping['ChNumberRoman'] = ''
@@ -248,7 +300,8 @@ class XtgFile(FileExport):
     def _get_chapters(self):
         """Process the chapters and nested sections.
         
-        Return a list of strings, or a message, depending on the _perChapter variable.
+        Return a list of strings, or a message, depending 
+        on the _perChapter variable.
         Extends the superclass method for the 'document per chapter' option.
         """
         if not self._perChapter:
@@ -286,7 +339,11 @@ class XtgFile(FileExport):
                 chapterNumber += 1
                 dispNumber = chapterNumber
             if template is not None:
-                lines.append(template.safe_substitute(self._get_chapterMapping(chId, dispNumber)))
+                lines.append(
+                    template.safe_substitute(
+                        self._get_chapterMapping(chId, dispNumber)
+                    )
+                )
 
             # Process sections.
             sectionLines, sectionNumber, wordsTotal = self._get_sections(
@@ -304,7 +361,11 @@ class XtgFile(FileExport):
             elif self._chapterEndTemplate:
                 template = Template(self._chapterEndTemplate)
             if template is not None:
-                lines.append(template.safe_substitute(self._get_chapterMapping(chId, dispNumber)))
+                lines.append(
+                    template.safe_substitute(
+                        self._get_chapterMapping(chId, dispNumber)
+                    )
+                )
             if not lines:
                 continue
 
@@ -312,8 +373,15 @@ class XtgFile(FileExport):
 
             # Fix the tags of indented paragraphs.
             # This is done here to include the section openings.
-            text = re.sub(r'\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
-            xtgPath = f'{xtgDir}/{dispNumber:04}_{self.novel.chapters[chId].title}{self.EXTENSION}'
+            text = re.sub(
+                r'\n\@.+?:\> ',
+                f'\n{self._tagIndentedParagraph}',
+                text
+            )
+            xtgPath = (
+                f'{xtgDir}/{dispNumber:04}_{self.novel.chapters[chId].title}'
+                f'{self.EXTENSION}'
+            )
             try:
                 with open(xtgPath, 'w', encoding='utf-8') as f:
                     f.write(text)
@@ -332,7 +400,11 @@ class XtgFile(FileExport):
 
         # Fix the tags of indented paragraphs.
         # This is done here to include the section openings.
-        text = re.sub(r'\n\@.+?:\> ', f'\n{self._tagIndentedParagraph}', text)
+        text = re.sub(
+            r'\n\@.+?:\> ',
+            f'\n{self._tagIndentedParagraph}',
+            text
+        )
         return text
 
     def write(self):

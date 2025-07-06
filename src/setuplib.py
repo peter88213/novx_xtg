@@ -18,7 +18,12 @@ from string import Template
 try:
     from tkinter import *
 except ModuleNotFoundError:
-    print('The tkinter module is missing. Please install the tk support package for your python3 version.')
+    print(
+        (
+            'The tkinter module is missing. '
+            'Please install the tk support package for your python3 version.'
+        )
+    )
     sys.exit(1)
 
 from tkinter import messagebox
@@ -39,10 +44,12 @@ $Apppath'''
 SHORTCUT_MESSAGE = '''
 Now you might want to create a shortcut on your desktop.  
 
-On Windows, open the installation folder, hold down the Alt key on your keyboard, 
+On Windows, open the installation folder, 
+hold down the Alt key on your keyboard, 
 and then drag and drop $Appname.py to your desktop.
 
-On Linux, create a launcher on your desktop. With xfce for instance, the launcher's command may look like this:
+On Linux, create a launcher on your desktop. 
+With xfce for instance, the launcher's command may look like this:
 python3 /home/peter/.novx/novx_xtg/novx_xtg.py %F
 '''
 
@@ -104,7 +111,10 @@ def install(novxPath, zipped):
     #--- Relocate the v1.x installation directory, if necessary.
     message = relocate.main()
     if message:
-        messagebox.showinfo('Moving the novelibre installation directory', message)
+        messagebox.showinfo(
+            'Moving the novelibre installation directory',
+            message
+        )
 
     # Create a general novelibre installation directory, if necessary.
     os.makedirs(novxPath, exist_ok=True)
@@ -183,7 +193,10 @@ def main(zipped=True):
         output(str(ex))
 
     # Show options: open installation folders or quit.
-    root.openButton = Button(text="Open installation folder", command=lambda: open_folder(f'{homePath}/.novx/{APPNAME}'))
+    root.openButton = Button(
+        text="Open installation folder",
+        command=lambda: open_folder(f'{homePath}/.novx/{APPNAME}'),
+    )
     root.openButton.config(height=1, width=30)
     root.openButton.pack(padx=5, pady=5)
     root.quitButton = Button(text="Quit", command=quit)

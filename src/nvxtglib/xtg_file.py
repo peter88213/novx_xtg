@@ -40,8 +40,8 @@ class XtgFile(FileExport):
             appended_section_template: str -- Template for sections appended 
                                               to the previous one.
             section_divider: str -- Section divider.
-            first_paragraph: str -- XPress tag for paragraphs preceded by a heading 
-                                    or a blank line. 
+            first_paragraph: str -- XPress tag for paragraphs preceded by
+                                    a heading or a blank line. 
             indented_paragraph: str -- XPress tag for indented paragraphs.
             other_paragraph: str -- XPress tag for regular paragraphs.
             italic: str -- XPress tag opening italic sections. 

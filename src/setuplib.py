@@ -86,7 +86,7 @@ def main(zipped=True):
             'ERROR: Cannot find a novelibre installation '
             f'at "{os.path.normpath(applicationDir)}".'
         )
-        input('Press any key to quit.')
+        input('Press ENTER to quit.')
         sys.exit(1)
 
     installDir = f'{applicationDir}{APPNAME}'
@@ -125,7 +125,7 @@ def main(zipped=True):
             message='Open the installation folder now?',
         ):
             open_folder(installDir)
-            input('Press any key to quit.')
+            input('Press ENTER to quit.')
     else:
-        input('Press any key to quit.')
+        input('Press ENTER to quit.')
 

@@ -16,7 +16,7 @@ from tkinter import messagebox
 import zipfile
 
 APPNAME = 'novx_xtg'
-VERSION = ' @release'
+VERSION = '@release'
 APP = f'{APPNAME}.py'
 
 SHORTCUT_MESSAGE = f'''

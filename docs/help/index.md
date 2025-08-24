@@ -230,6 +230,16 @@ There are two options:
 -   `$AuthorName` - Author's name
 -   `$Language` - Language code acc. to ISO 639-1
 -   `$Country` - Country code acc. to ISO 3166-2
+-   `$NotASceneField1 - Field 1 name for sections that aren't scenes
+-   `$NotASceneField2 - Field 2 name for sections that aren't scenes
+-   `$NotASceneField3 - Field 3 name for sections that aren't scenes
+-   `$OtherSceneField1 - Field 1 name for other scenes
+-   `$OtherSceneField2 - Field 2 name for other scenes
+-   `$OtherSceneField3 - Field 3 name for other scenes
+-   `$CharacterExtraField` - Extra field name for character data
+
+**Deprecated:**
+
 -   `$CustomPlotProgress` - Custom "Plot progress" field title
 -   `$CustomCharacterization` - Custom "Characterization" field title
 -   `$CustomWorldBuilding` - Custom "World building" field title
@@ -296,6 +306,15 @@ There are two options:
 -   `$Country` - Country code acc. to ISO 3166-2
 -   `$ManuscriptSuffix` - File name suffix of the manuscript
 -   `$SectionsSuffix` - File name suffix of the section descriptions
+-   `$NotASceneField1` - Field 1 name for sections that aren't scenes
+-   `$NotASceneField2` - Field 2 name for sections that aren't scenes
+-   `$NotASceneField3` - Field 3 name for sections that aren't scenes
+-   `$OtherSceneField1` - Field 1 name for other scenes
+-   `$OtherSceneField2` - Field 2 name for other scenes
+-   `$OtherSceneField3` - Field 3 name for other scenes
+
+**Deprecated:**
+
 -   `$CustomPlotProgress` - Custom "Plot progress" field title
 -   `$CustomCharacterization` - Custom "Characterization" field title
 -   `$CustomWorldBuilding` - Custom "World building" field title

@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 5.5.0
+
+- Updated the placeholder definitions for novelibre 5.34.
+
+Based on novelibre 5.34.0
+
+
 ### Version 5.4.0
 
 - Updated the placeholder definitions for novelibre 5.33.

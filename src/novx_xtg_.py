@@ -1,7 +1,7 @@
 """Export novelibre project to XPress tagged text.
 
 Version @release
-Requires Python 3.6+
+Requires Python 3.7+
 Copyright (c) 2025 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
@@ -60,6 +60,14 @@ LOOKUP = {'language_codes':{}}
 
 
 def main(sourcePath, silentMode=True, installDir='.'):
+    major = sys.version_info.major
+    minor = sys.version_info.minor
+    if  major != 3 or minor < 7:
+        raise Exception(
+            f'Wrong Python version installed: {major}.{minor}.\n'
+            'Must be 3.7 or newer.'
+        )
+
     if silentMode:
         ui = Ui('')
     else:

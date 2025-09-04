@@ -15,6 +15,16 @@ import sys
 from tkinter import messagebox
 import zipfile
 
+major = sys.version_info.major
+minor = sys.version_info.minor
+if  major != 3 or minor < 7:
+    print(
+        f'Wrong Python version installed: {major}.{minor}.\n'
+        'Must be 3.7 or newer.'
+    )
+    input('Press ENTER to quit.')
+    sys.exit(1)
+
 APPNAME = 'novx_xtg'
 VERSION = '@release'
 APP = f'{APPNAME}.py'

@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 5.5.1
+
+Checking the Python version (must be 3.7 or newer).
+
+Based on novelibre 5.35.1
+
+
 ### Version 5.5.0
 
 - Updated the placeholder definitions for novelibre 5.34.

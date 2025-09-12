@@ -209,6 +209,7 @@ the names of styles that already exist in the QX book project instead.
 -   `sectionDivider.XTG` - Section divider placed between sections.
 -   `appendedSectionTemplate.XTG` - Applied to sections to be appended
     to the previous section.
+-   `epigraphTemplate` (applied to epigraphs)
 
 ----------------------------------------------------------------------------
 
@@ -256,8 +257,6 @@ There are two options:
 -   `$ChapterNumber` - Chapter number (in sort order),
 -   `$Title` - Chapter title
 -   `$Desc` - Chapter description
--   `$Epigraph` - Epigraph
--   `$EpigraphSrc` - Epigraph source
 -   `$Notes` - Chapter notes
 -   `$ProjectName` - URL-coded file name without suffix and extension
 -   `$ProjectPath` - URL-coded fpath to the project directory

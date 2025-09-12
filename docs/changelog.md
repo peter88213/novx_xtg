@@ -4,6 +4,12 @@
 
 ## Changelog
 
+### Version 5.6.0
+
+- Reading novx version 1.8 files.
+
+Based on novelibre 5.37.2
+
 
 ### Version 5.5.1
 

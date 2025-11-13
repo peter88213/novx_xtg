@@ -70,19 +70,14 @@ novelibre's "proof read" function.
 -   If a template file or a configuration entry is missing, *novx_xtg*
     uses the lower priority source as a fallback.
 
-----------------------------------------------------------------------------
+> [!NOTE]
+> You find the a sample configuration folder with templates and the
+> *novx_xtg* default values in the *novelibre* installation directory under
+> 
+> `c:\Users\<user name>\.novx\novx_xtg\sample\`
+> 
+> You best make a copy and edit it.
 
-**Hint**
-
-You find the a sample configuration folder with templates and the
-*novx_xtg* default values in the *novelibre* installation directory
-under
-
-`c:\Users\<user name>\.novx\novx_xtg\sample\`
-
-You best make a copy and edit it.
-
-----------------------------------------------------------------------------
 
 ### Configuration file
 

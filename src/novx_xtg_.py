@@ -21,8 +21,8 @@ from pathlib import Path
 import sys
 
 from nvlib.gui.set_icon_tk import set_icon
-from nvlib.user_interface.ui import Ui
-from nvlib.user_interface.ui_tk import UiTk
+from nvlib.alternative_ui.ui import Ui
+from nvlib.alternative_ui.ui_tk import UiTk
 from nvxtglib.xtg_config import XtgConfig
 from nvxtglib.xtg_exporter import XtgExporter
 

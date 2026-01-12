@@ -5,6 +5,15 @@
 ## Changelog
 
 
+### Version 5.7.1
+
+Refactored the code for better maintainability.
+
+- `XtgConfig` is no longer a `Configuration` subclass.
+
+Based on novelibre 5.50.0
+
+
 ### Version 5.7.0
 
 - Writing novx version 1.9 files.

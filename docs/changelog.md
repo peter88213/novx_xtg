@@ -5,6 +5,13 @@
 ## Changelog
 
 
+### Version 5.7.2
+
+- Fixed the Python version check.
+
+Based on novelibre 5.53.5
+
+
 ### Version 5.7.1
 
 Refactored the code for better maintainability.

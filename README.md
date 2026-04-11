@@ -20,7 +20,7 @@ Optionally, one XTG file per chapter can be generated.
 
 ### Default: Executable Python zip archive
 
-Download the latest release [novx_xtg_v5.7.2.pyz](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.7.2.pyz)
+Download the latest release [novx_xtg_v5.7.2.pyz](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.7.2.pyz) (44 KB)
 
 - Launch *novx_xtg_v5.7.2.pyz* by double-clicking (Windows desktop),
 - or execute `python novx_xtg_v5.7.2.pyz` (Windows), resp. `python3 novx_xtg_v5.7.2.pyz` (Linux) on the command line.
@@ -38,7 +38,7 @@ Download the latest release [novx_xtg_v5.7.2.pyz](https://github.com/peter88213/
 
 ### Alternative: Zip file
 
-The package is also available in zip format: [novx_xtg_v5.7.2.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.7.2.zip)
+The package is also available in zip format: [novx_xtg_v5.7.2.zip](https://github.com/peter88213/novx_xtg/raw/main/dist/novx_xtg_v5.7.2.zip) (47 KB)
 
 - Extract the *novx_xtg_v5.7.2* folder from the downloaded zipfile "novx_xtg_v5.7.2.zip".
 - Move into this new folder and launch *setup.py* by double-clicking (Windows/Linux desktop), 

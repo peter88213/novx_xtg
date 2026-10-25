@@ -1,32 +1,25 @@
 # Contributing
 
-## Development
+## General
 
-*novx_xtg* is organized as an Eclipse PyDev project. The official release branch on GitHub is *main*.
+This repository is a part of the *novelibre* software project. 
+Please be sure to follow the 
+[central contribution guidelines](https://github.com/peter88213/novelibre?tab=contributing-ov-file). 
 
-*novx_xtg* depends on the [novxlib](https://github.com/peter88213/novxlib) library which must be present in your file system. It is organized as an Eclipse PyDev project. The official release branch on GitHub is *main*.
 
 ### Mandatory directory structure for building the application script
 
 ```
 .
-├── novxlib/
-│   └── src/
-│       └── novxlib/
+├── novelibre/
+│   ├── src/
+│   │   └── nvlib/
+│   └── tools/ 
+│       ├── inliner.py
+│       └── package_builder.py
 └── novx_xtg/
     ├── src/
-    ├── test/
+    │   └── nvxtglib/
     └── tools/ 
         └── build.xml
 ```
-
-### Conventions
-
-See https://github.com/peter88213/novelibre/blob/main/docs/conventions.md
-
-## Development tools
-
-- [Python](https://python.org) version 3.11.
-- [Eclipse IDE](https://eclipse.org) with [PyDev](https://pydev.org) and *EGit*.
-- *Apache Ant* is used for building the application.
-

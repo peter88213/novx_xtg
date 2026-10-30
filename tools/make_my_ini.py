@@ -2,7 +2,7 @@
 
 Create config file and template files for German QX document.
 
-Copyright (c) 2022 Peter Triesberger
+Copyright (c) 2022-2026 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """

@@ -3,7 +3,7 @@
 The table is a JSON file.
 File location is the novx_xtg configuration directory in the user's home directory.
 
-Copyright (c) 2022 Peter Triesberger
+Copyright (c) 2022-2026 Peter Triesberger
 For further information see https://github.com/peter88213/novx_xtg
 Published under the MIT License (https://opensource.org/licenses/mit-license.php)
 """
